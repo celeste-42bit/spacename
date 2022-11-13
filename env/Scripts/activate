@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\jasha\Personal Files_LIBRARY\KSAT\SOURCE\send_your_name_to_space_SRC\send_your_name_to_space\env"
+VIRTUAL_ENV="C:\Users\studi\KSat\SOURCE\Software\spacename\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
