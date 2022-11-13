@@ -20,6 +20,7 @@ def my_form_post():
     with open("names.txt", "a+") as f:  # Mode a+ creates the file "names.txt" if it does not exist and appends everything written.
         f.write(name + "\n")
         f.close()
+    return render_template("done.html")
     
 
 @app.route("/page0")
