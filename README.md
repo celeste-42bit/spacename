@@ -1,7 +1,7 @@
 # KSat spacename
 Fly your name to space! Website based on Python-Flask.
 
-## A friendly warning
+## A friendly warning ⚠
 This is not a production version but rather a prototype of the website, intended for demonstration purposes only. <br>
 In its current state it is NOT SAFE TO USE on a host platform!
 
