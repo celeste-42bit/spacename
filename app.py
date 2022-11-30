@@ -26,3 +26,6 @@ def my_form_post():
 @app.route("/page0")
 def page0():
     return "Hello World!"
+
+if __name__ == "__main__":
+    app.run(debug=True)

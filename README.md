@@ -7,7 +7,7 @@ In its current state it is NOT SAFE TO USE on a host platform!
 
 ## Installation
 Required: <br>
-Python 3.8 or later (3.11.0 recommended) <br>
+Python 3.8 or later (3.11.0 is recommended) <br>
 https://docs.python.org/3/using/windows.html <br>
 https://docs.python.org/3/using/unix.html <br>
 
@@ -22,3 +22,17 @@ Windows: <br>
 1. ```python.exe -m venv env``` <br>
 2. ```.\env\Scripts\activate.ps1``` or ```.\env\Scripts\activate``` <br>
 3. ```python.exe -m pip install -r requirements.txt```
+
+## Run
+
+To run the app, open a terminal inside the spacename folder and type: <br>
+Unix-likes/Linux: <br>
+```python ./app.py```
+Windows: <br>
+```python.exe .\app.py```
+
+## Deployment
+
+Comming soon! <br>
+We're still working on a deployment package, which will run the webserver via nginx with the help of python-gunicorn. <br>
+As sson as we are done, we'll post the install instructions right here ^^
