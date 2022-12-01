@@ -36,3 +36,9 @@ Windows: <br>
 Comming soon! <br>
 We're still working on a deployment package, which will run the webserver via nginx with the help of python-gunicorn. <br>
 As sson as we are done, we'll post the install instructions right here ^^
+
+## Notes
+
+So I know the boilerplate HTML code is very whacky and I will use some jinja at a later point in time to implement CSS formatting and modular HTML integrations to make all of this look a lot sexier!
+
+The download function is still on its way to be integrated and I'm just playing around with it to check out how it works. For now, this should be enough for a little presentation. Have fun with it and pls don't hit me for any bugs you may find ^^
