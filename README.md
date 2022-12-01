@@ -28,7 +28,7 @@ Windows: <br>
 
 To run the app, open a terminal inside the spacename folder and type: <br>
 Unix-likes/Linux: <br>
-```python ./app.py``` <br>
+```python -m app``` <br>
 Windows: <br>
 ```python.exe .\app.py```
 
