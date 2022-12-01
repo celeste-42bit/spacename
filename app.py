@@ -21,7 +21,7 @@ def my_form_post():
         f.write(name + "\n")
         f.close()
     return render_template("done.html")
-    
+
 
 @app.route("/page0")
 def page0():
