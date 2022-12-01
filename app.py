@@ -14,10 +14,12 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+
 @app.route("/", methods=["POST"])  # Getting the name entered in the text field
 def my_form_post():
     name = request.form['text']
     writeName(name)
+    return render_template("done.html")
 
 
 @app.route("/page0")
@@ -25,9 +27,32 @@ def page0():
     return "Hello World!"
 
 
+def writeName(name):
+    with open("names.txt", "a+") as f:
+        f.write(name + "\n")
+        f.close()
+
+
 #TODO if file doesn't exist, create it and jump to write
 #TODO if file exists, check if name already exists, if not write it
 #TODO if file exists, check if name already exists, if yes, ask if user still wants to add it
+
+''' IDEAL, UN-OPTIMIZED
+def writeName(name):  # TODO optimize!
+    if os.path.exists("./names.txt"):
+        with open("names.txt", "ra+") as f:  # TODO is ra+ valid???
+            if f.readlines.__contains__(name):
+                pass # TODO ask if user wants to write
+            else:
+                f.write(name)
+    else:
+        with open("names.txt", "a+") as f:
+            f.write(name)
+            f.close()
+'''
+
+
+''' PRE
 def writeName(name):
     with open("names.txt", "r") as f:
         if f.readlines.__contains__(name):
@@ -37,8 +62,7 @@ def writeName(name):
                 f.write(name + "\n")
                 f.close()
         return render_template("done.html")
-
+'''
 
 if __name__ == "__main__":
     app.run(debug=True)
-
