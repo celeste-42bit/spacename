@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<a href="{{ url_for('download', filename="names.txt") }}">File</a>
 		<title>KSAT SOURCE</title>
 	</head>
 	<body style="background-color:rgb(255, 255, 0);">
@@ -10,6 +9,7 @@
 		<p>&nbsp;</p>
 		<p><img src="{{url_for('static', filename='source.png')}}"  alt="source logo" width="200" height="200" /></p>
 		<p>&nbsp</p>
-        <p><br />Your name was submitted! You can now close this webpage</p>
+        <p><br />Your name was submitted! You can now download your ticket!</p>
+		<a href="{{ url_for('download', filename="./names.txt") }}">Click here to download your ticket!</a>
 	</body>
 </html>
