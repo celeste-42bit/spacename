@@ -60,18 +60,5 @@ def writeName(name):  # TODO optimize!
             f.close()
 '''
 
-
-''' PRE
-def writeName(name):
-    with open("names.txt", "r") as f:
-        if f.readlines.__contains__(name):
-            pass #TODO Page: Name already exists, u sure u want to add it?
-        else:
-            with open("names.txt", "a+") as f:  # Mode a+ creates the file "names.txt" if it does not exist and appends everything written.
-                f.write(name + "\n")
-                f.close()
-        return render_template("done.html")
-'''
-
 if __name__ == "__main__":
     app.run(debug=True)
