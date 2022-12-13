@@ -9,7 +9,7 @@ from flask import Flask, render_template, redirect, url_for, request, send_from_
 import os, os.path
 
 app = Flask(__name__)
-
+app.config['UPLOAD_FOLDER'] = "./uploads"
 # route for main page + its function
 @app.route("/")  # main page, loaded from index.html
 def index():
@@ -26,26 +26,15 @@ def my_form_post():
         return render_template("exists.html")
 
 # Function for file download
-@app.route("/download", methods=['GET', 'POST'])
+
+@app.route("/uploads/<path:filename>", methods=['GET', 'POST'])
 def download(filename):
-    # Appending app path to upload folder path within app root folder
-    uploads = os.path.join(current_app.root_path, app.config['UPLOAD_FOLDER'])
-    # Returning file from appended path
-    return send_from_directory(directory=uploads, filename=filename)
-
-
-@app.route("/page0")
-def page0():
-    return "Hello World!"
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename, as_attachment=True)
 
 
 def writeName(name):
     with open("names.txt", "a+") as f:
-        if(f.readlines().__contains__(name)):
-            return -1
-        else:
-            f.write(name)
-            return 0
+        f.write(name + "\n")
 
 
 if __name__ == "__main__":
