@@ -3,7 +3,8 @@ Fly your name to space! Website based on Python-Flask.
 
 ## A friendly warning ⚠
 This version is not ready for deploayment and is only intended for demonstration purposes. <br>
-In its current state it is NOT SAFE TO USE on a public webserver! <br> <br>
+In its current state it is NOT SAFE TO USE on a public webserver! <br>
+Run on localhost (127.0.0.1) only as intended for Flasks active debug mode <br>
 
 ## Installation
 Required: <br>
