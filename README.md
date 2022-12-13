@@ -2,13 +2,13 @@
 Fly your name to space! Website based on Python-Flask.
 
 ## A friendly warning ⚠
-This version is not ready for deploayment and is only intended for demonstration purposes. <br>
+This version is not ready for deployment and is only intended for demonstration purposes. <br>
 In its current state it is NOT SAFE TO USE on a public webserver! <br>
 Run on localhost (127.0.0.1) only as intended for Flasks active debug mode <br>
 
 ## Installation
 Required: <br>
-Python 3.8 or later (3.11.0 is recommended) <br>
+Python 3.8 or later (recommended: 3.11.0, tested for: 3.11, 3.10) <br>
 https://docs.python.org/3/using/windows.html <br>
 https://docs.python.org/3/using/unix.html <br>
 
