@@ -36,7 +36,7 @@ Windows: <br>
 
 Comming soon! <br>
 We're still working on a deployment package, which will run the webserver via nginx with the help of python-gunicorn. <br>
-As sson as we are done, we'll post the install instructions right here ^^
+As soon as we are done, we'll post the extended install and deployment instructions right here ^^
 
 ## Notes
 
