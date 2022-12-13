@@ -2,9 +2,8 @@
 Fly your name to space! Website based on Python-Flask.
 
 ## A friendly warning ⚠
-This is not a production version but rather a prototype of the website, intended for demonstration purposes only. <br>
-In its current state it is NOT SAFE TO USE on a host platform! <br> <br>
-Do NOT press the download button on the /done page, unless you wanna make the program crash. It's not implemented yet and there is nothing catching the error. No damage will be done, but - try at your own risk HEHE ^^
+This version is not ready for deploayment and is only intended for demonstration purposes. <br>
+In its current state it is NOT SAFE TO USE on a public webserver! <br> <br>
 
 ## Installation
 Required: <br>
