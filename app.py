@@ -19,8 +19,11 @@ def index():
 @app.route("/", methods=["POST"])  # Getting the name entered in the text field
 def my_form_post():
     name = request.form['text']
-    writeName(name)
-    return render_template("done.html") #TODO: This needs a download button
+    status = writeName(name)
+    if(status == 0):
+        return render_template("done.html") #TODO: This needs a download button
+    else:
+        return render_template("exists.html")
 
 # Function for file download
 @app.route("/download", methods=['GET', 'POST'])
@@ -38,27 +41,12 @@ def page0():
 
 def writeName(name):
     with open("names.txt", "a+") as f:
-        f.write(name + "\n")
-        f.close()
-
-
-#TODO if file doesn't exist, create it and jump to write
-#TODO if file exists, check if name already exists, if not write it
-#TODO if file exists, check if name already exists, if yes, ask if user still wants to add it
-
-''' IDEAL, UN-OPTIMIZED
-def writeName(name):  # TODO optimize!
-    if os.path.exists("./names.txt"):
-        with open("names.txt", "ra+") as f:  # TODO is ra+ valid???
-            if f.readlines.__contains__(name):
-                pass # TODO ask if user wants to write
-            else:
-                f.write(name)
-    else:
-        with open("names.txt", "a+") as f:
+        if(f.readlines().__contains__(name)):
+            return -1
+        else:
             f.write(name)
-            f.close()
-'''
+            return 0
+
 
 if __name__ == "__main__":
     app.run(debug=True)

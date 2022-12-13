@@ -1,0 +1,19 @@
+{% extends 'template.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+<title>Fly Your Name To Space!</title>
+{% endblock %}
+
+
+{% block body %}
+<p>&nbsp;</p>
+<h1>KSat Stuttgart - Fly your name to space!</h1>
+<p>&nbsp;</p>
+<p><img src="{{url_for('static', filename='source.png')}}"  alt="source logo" width="200" height="200" /></p>
+<p>&nbsp</p>
+<p>Tell us your name and it will fly to space on our satellite!</p>
+<form method="POST">
+    <div><input name="text" type="text" minlength="7" placeholder="Your Name" size="40"> <button type="submit" value="Send!" /></div>
+</form>
+{% endblock %}
