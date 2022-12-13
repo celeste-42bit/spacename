@@ -20,10 +20,7 @@ def index():
 def my_form_post():
     name = request.form['text']
     status = writeName(name)
-    if(status == 0):
-        return render_template("done.html") #TODO: This needs a download button
-    else:
-        return render_template("exists.html")
+    return render_template("done.html") #TODO: This needs a download button
 
 # Function for file download
 
