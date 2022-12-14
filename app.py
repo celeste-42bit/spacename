@@ -1,12 +1,13 @@
 # ------------------------------------------
 # fly_your_name_to_space
-# app.py V.: 0.0.5
+# app.py V.: 0.2.0
 # https://github.com/celeste-42bit/spacename
 # Copyright (C) 2022 celeste-42bit : MIT
 # ------------------------------------------
 
 from flask import Flask, render_template, redirect, url_for, request, send_from_directory, current_app
 import os, os.path
+
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = "./uploads"
@@ -15,14 +16,14 @@ app.config['UPLOAD_FOLDER'] = "./uploads"
 def index():
     return render_template("index.html")
 
+
 # extension of route "/" which accepts names
 @app.route("/", methods=["POST"])  # Getting the name entered in the text field
 def my_form_post():
     name = request.form['text']
     status = writeName(name)
-    return render_template("done.html") #TODO: This needs a download button
+    return render_template("done.html")
 
-# Function for file download
 
 @app.route("/uploads/<path:filename>", methods=['GET', 'POST'])
 def download(filename):
