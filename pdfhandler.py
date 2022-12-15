@@ -71,8 +71,8 @@ class PdfTicketWriter:
             if str(op) == 'ET':
                 ix = i
         self.instructions = [
-            *self.instructions[:ix], 
-            *new_instructions, 
+            *self.instructions[:ix],
+            *new_instructions,
             *self.instructions[ix:]
         ]
         # the pdf is not ready until the content stream is written
