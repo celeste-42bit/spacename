@@ -21,7 +21,7 @@ def index():
 @app.route("/", methods=["POST"])  # Getting the name entered in the text field
 def my_form_post():
     name = request.form['text']
-    status = writeName(name)
+    writeName(name)
     return render_template("done.html")
 
 
