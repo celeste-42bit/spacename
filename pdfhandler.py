@@ -51,11 +51,11 @@ class PdfTicketWriter:
 
 
         instructions = [
-            CSI([], pikepdf.Operation('BT')),   # begin text
+            CSI([], pikepdf.Operator('BT')),   # begin text
             CSI([pikepdf.Name.Courier, size], pikepdf.Operator('Tf')),  # set font
             CSI([1,0,0,1,x,y], pikepdf.Operator('Tm')),     # move cursor to x, y
             CSI([pikepdf.String(text)], pikepdf.Operator('Tj')),    # paint text
-            CSI([], pikepdf.Operation('ET')),   # end text
+            CSI([], pikepdf.Operator('ET')),   # end text
         ]
         return instructions
 

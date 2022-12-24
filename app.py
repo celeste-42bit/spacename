@@ -7,6 +7,7 @@
 
 from flask import Flask, render_template, redirect, url_for, request, send_from_directory, current_app, send_file
 from pdfhandler import *
+from PIL import Image, ImageDraw, ImageFont
 import os, os.path
 
 
@@ -21,28 +22,24 @@ def index():
 
 
 # extension of route "/" which accepts names
-@app.route("/", methods=["POST"])  # Getting the name entered in the text field
+@app.route("/", methods=['POST'])  # Getting the name entered in the text field
 def my_form_post():
+    global name  # make name globally available
     name = request.form['text']
     writeName(name)
     return render_template("done.html")
 
-@app.route('/do_make_ticket', methods=['POST'])
-def make_ticket(name):
-    # you will have to figure out x and y based on your ticket layout.
-    x = 113.2
-    y = 45.0
+#---------------------------------------------
 
-    ticket_writer.add_text(name)
-    bytes_file = ticket_writer.to_bytesio()
-    ticket_writer.reload()
+@app.route("/ticket/<path:filename>", methods=['GET', 'POST'])
+def push_ticket(filename):
+    img = Image.open('./uploads/pyramids.jpg')
+    I1 = ImageDraw.Draw(img)
+    I1.text((28, 36), name, font = ImageFont.truetype('./static/Arial.ttf', 65), fill=(255, 0, 0))
+    img.show()
+    img.save("pyramids-edit.jpg")
 
-    return send_file(
-        bytes_file,
-        mimetype='application/pdf',
-        as_attachment=True,
-        download_name=f'ticket-{name}.pdf'
-    )
+#---------------------------------------------
 
 
 @app.route("/uploads/<path:filename>", methods=['GET', 'POST'])
@@ -57,3 +54,23 @@ def writeName(name):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+"""
+@app.route('/do_make_ticket', methods=['GET','POST'])
+def make_ticket(name = "Blubb"):
+    # you will have to figure out x and y based on your ticket layout.
+    x = 113.2
+    y = 45.0
+
+    ticket_writer.add_text(name, x, y, 12) # (str, x, y, size)
+    bytes_file = ticket_writer.to_bytesio()
+    ticket_writer.reload()
+
+    return send_file(
+        bytes_file,
+        mimetype='application/pdf',
+        as_attachment=True,
+        download_name=f'ticket-{name}.pdf'
+    )
+"""
