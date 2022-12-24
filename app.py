@@ -31,13 +31,14 @@ def my_form_post():
 
 #---------------------------------------------
 
-@app.route("/ticket/<path:filename>", methods=['GET', 'POST'])
-def push_ticket(filename):
-    img = Image.open('./uploads/pyramids.jpg')
+@app.route("/ticket", methods=['GET', 'POST'])
+def push_ticket():
+    img = Image.open('./uploads/ticket_original.jpg')
     I1 = ImageDraw.Draw(img)
-    I1.text((28, 36), name, font = ImageFont.truetype('./static/Arial.ttf', 65), fill=(255, 0, 0))
+    I1.text((1960, 600), name, font = ImageFont.truetype('./static/arial-black.ttf', 40), fill=(50, 50, 50))
     img.show()
-    img.save("pyramids-edit.jpg")
+    img.save("./uploads/your-ticket.jpg")
+    return send_from_directory(app.config['UPLOAD_FOLDER'], 'your-ticket.jpg', as_attachment=True)
 
 #---------------------------------------------
 
@@ -56,7 +57,7 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 
-"""
+"""dumped pdf handling thingy...
 @app.route('/do_make_ticket', methods=['GET','POST'])
 def make_ticket(name = "Blubb"):
     # you will have to figure out x and y based on your ticket layout.

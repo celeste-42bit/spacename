@@ -13,8 +13,6 @@
 <p><img src="{{url_for('static', filename='source.png')}}"  alt="source logo" width="200" height="200" /></p>
 <p>&nbsp</p>
 <p><br />Your name was submitted! You can download your ticket by clicking the link below:</p>
-<a href="{{ url_for('download', filename="ticket_original.pdf") }}">Download your ticket!</a>
-<a href="{{ url_for('make_ticket') }}">Download your ticket (alternative)!</a>
-<a href="{{ url_for('get_ticket') }}">Download your ticket again (2nd alternative)!</a>
+<a href="{{ url_for('push_ticket') }}">Download your ticket!</a>
 
 {% endblock %}
