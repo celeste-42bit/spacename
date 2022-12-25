@@ -1,6 +1,6 @@
 # ------------------------------------------
 # fly_your_name_to_space
-# app.py V.: 0.2.0
+# app.py V.: 1.0.0
 # https://github.com/celeste-42bit/spacename
 # Copyright (C) 2022 celeste-42bit : MIT
 # ------------------------------------------
@@ -29,18 +29,18 @@ def my_form_post():
     writeName(name)
     return render_template("done.html")
 
-#---------------------------------------------
+#----------------------------------------------
 
 @app.route("/ticket", methods=['GET', 'POST'])
 def push_ticket():
     img = Image.open('./uploads/ticket_original.jpg')
     I1 = ImageDraw.Draw(img)
-    I1.text((1960, 600), name, font = ImageFont.truetype('./static/arial-black.ttf', 40), fill=(50, 50, 50))
-    img.show()
-    img.save("./uploads/your-ticket.jpg")
+    I1.text((1960, 600), name, font = ImageFont.truetype('./static/arial-black.ttf', 40), fill=(50, 50, 50))  # text generation and placement
+    #img.show() # this line displays the image on the client right after creation
+    img.save("./uploads/your-ticket.jpg")  # synchronously overwrites the "old" ticket every time a new one is created
     return send_from_directory(app.config['UPLOAD_FOLDER'], 'your-ticket.jpg', as_attachment=True)
 
-#---------------------------------------------
+#----------------------------------------------
 
 
 @app.route("/uploads/<path:filename>", methods=['GET', 'POST'])
