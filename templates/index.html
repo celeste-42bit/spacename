@@ -2,7 +2,7 @@
 
 {% block head %}
 <link rel="stylesheet" href="{{ url_for('static', filename='default.css') }}">
-<title>Fly Your Name To Space!</title>
+<title>3... 2... 1...</title>
 {% endblock %}
 
 
@@ -12,7 +12,7 @@
 <p>&nbsp;</p>
 <p><img src="{{url_for('static', filename='fargo.png')}}"  alt="fargo logo" width="200" height="200" /></p>
 <p>&nbsp</p>
-<p>Tell us your name and it will fly to space on our satellite!</p>
+<p>Tell us your name and we will fly it to the ISS on bord of the FARGO experiment!</p>
 <form method="POST">
     <div><input name="text" type="text" minlength="7" placeholder="Your Name" size="40"> <input type="submit" value="Send!" /></div>
 </form>
