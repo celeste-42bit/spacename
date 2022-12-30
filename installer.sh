@@ -1,6 +1,5 @@
 #!/bin/bash
-python --version
-echo "Creating virtual environment 'env' using python-venv!"
+echo "Creating virtual environment 'env' using python-venv, this might take a second..."
 python -m venv env
 ./env/scripts/activate.sh
 echo "Installing all neccessary components for spacename on your server!"
