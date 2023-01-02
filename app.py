@@ -1,6 +1,6 @@
 # ------------------------------------------
 # fly_your_name_to_space
-# app.py V.: 1.0.0
+# app.py V.: 1.1.5
 # https://github.com/celeste-42bit/spacename
 # Copyright (C) 2022 celeste-42bit : MIT
 # ------------------------------------------
