@@ -2,7 +2,7 @@
 # fly_your_name_to_space
 # app.py V.: 1.1.5
 # https://github.com/celeste-42bit/spacename
-# Copyright (C) 2022 celeste-42bit : MIT
+# Copyright (C) 2022-2023 celeste-42bit : MIT
 # ------------------------------------------
 
 from flask import Flask, render_template, redirect, url_for, request, send_from_directory, current_app, send_file
