@@ -1,13 +1,12 @@
 # ------------------------------------------
 # fly_your_name_to_space
-# app.py V.: 1.1.5
+# app.py V.: 1.1.6
 # https://github.com/celeste-42bit/spacename
 # Copyright (C) 2022-2023 celeste-42bit : MIT
 # ------------------------------------------
 
-from flask import Flask, render_template, redirect, url_for, request, send_from_directory, current_app, send_file
+from flask import Flask, render_template, request, send_from_directory
 from PIL import Image, ImageDraw, ImageFont
-import os, os.path
 
 
 app = Flask(__name__)
@@ -57,7 +56,8 @@ def writeName(name):
 
 if __name__ == "__main__":
 # "deployed mode", posting on all interfaces, port 80, debug disabled (WARNING: Debug mode is not safe for deployment!)
-    app.run(host='0.0.0.0', port=80, debug=False)
+    #app.run(host='0.0.0.0', port=80, debug=False)
 
 # "debug mode" on localhost:5000 (debug mode allows for quick server updates, every time changes to the code are saved by [CTRL]+[S])
-    #app.run(debug=True)
+# "debug mode" is required for GitHub Codespaces!
+    app.run(debug=True)
