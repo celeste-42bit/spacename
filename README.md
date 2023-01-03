@@ -1,6 +1,6 @@
 <img src="logo.png" alt="KSat logo" height="100" width="100" align="right"/>
 
-# KSat spacename 1.1.2
+# KSat spacename 1.1.5
 Fly your name to space! Website based on Python-Flask (with templates for FARGO - for more, please open a request at the 'issues' section).
 
 ## Installation
