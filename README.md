@@ -29,6 +29,6 @@ Unix-likes/Linux: <br>
 Windows: <br>
 ```python.exe .\app.py```
 
-<img src="logo-fargo.png" alt="FARGO logo" height="100" width="100" align="right"/>
-<img src="logo-source.png" alt="KSat logo" height="100" width="100" align="right"/>
+<img src="logo-fargo.png" alt="FARGO logo" height="75" width="75" align="right"/>
+<img src="logo-source.png" alt="SOURCE logo" height="75" width="75" align="right"/>
 
