@@ -1,4 +1,4 @@
-<img src="logo.png" alt="KSat logo" height="100" width="100" align="right"/>
+<img src="logo-ksat.png" alt="KSat logo" height="100" width="100" align="right"/>
 
 # KSat spacename 1.1.6
 Fly your name to space! Website based on Python-Flask (with templates for FARGO - for more, please open a request at the 'issues' section).
@@ -29,6 +29,5 @@ Unix-likes/Linux: <br>
 Windows: <br>
 ```python.exe .\app.py```
 
-<img src="logo.png" alt="KSat logo" height="100" width="100" align="right"/>
-<img src="logo.png" alt="KSat logo" height="100" width="100" align="right"/>
-<img src="logo.png" alt="KSat logo" height="100" width="100" align="right"/>
+<img src="logo-fargo.png" alt="FARGO logo" height="100" width="100" align="right"/>
+
