@@ -28,3 +28,7 @@ Unix-likes/Linux: <br>
 ```python -m app``` <br>
 Windows: <br>
 ```python.exe .\app.py```
+
+<img src="logo.png" alt="KSat logo" height="100" width="100" align="right"/>
+<img src="logo.png" alt="KSat logo" height="100" width="100" align="right"/>
+<img src="logo.png" alt="KSat logo" height="100" width="100" align="right"/>
